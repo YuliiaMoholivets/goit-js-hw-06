@@ -10,14 +10,14 @@ function onFormSubmit(event) {
   const mail = formElements.email.value;
   const password = formElements.password.value;
 
-  const formData = {
+    if (!email || !password) {
+    return alert("Please fill in all the fields!");
+    }
+  
+    const formData = {
     mail,
     password,
   };
-
-  if (mail === '' || password === '') {
-    return alert('Заповніть, будь-ласка, поля "Email" та "Password" !');
-  }
 
   console.log(formData);
 
