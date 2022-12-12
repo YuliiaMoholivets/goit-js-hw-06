@@ -11,7 +11,7 @@ const destroyBtn = document.querySelector('button[data-destroy]');
 
 const divColoredBoxContainer = document.querySelector('#boxes');
 
-const elements = [];
+let elements = [];
 
 // create boxes
 createBtn.addEventListener('click', function () {
@@ -39,7 +39,7 @@ createBtn.addEventListener('click', function () {
 // destroy boxes
 function destroyBoxes() {
   divColoredBoxContainer.innerHTML = '';
-  elements.splice(0, 101);
+  elements = [];
 }
 
 destroyBtn.addEventListener('click', function () {
